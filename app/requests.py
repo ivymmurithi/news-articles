@@ -1,7 +1,5 @@
 from app import app
 import urllib.request,json
-
-from app.source_tests import NewsTest
 from .models import source, articles
 
 Source = source.Source
@@ -32,13 +30,6 @@ def process_results(news_list):
     for news_item in news_list:
         name = news_item.get('name')
         url = news_item.get('url')
-        title = news_item.get('title')
-        author = news_item.get('author')
-        description = news_item.get('description')
-        publishedAt = news_item.get('publishedAt')
-        content = news_item.get('content')
-        urlToImage = news_item.get('urlToImage')
-
 
         source_object = Source(name,url)
         news_results.append(source_object)
