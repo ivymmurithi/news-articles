@@ -9,7 +9,9 @@
 <body>
     <h3>Global Sources</h3>
     <ul>
-        {% for  %}
+        {% for source in sources %}
+        <li>{{ source.name }}</li>
+        {% endfor %}
     </ul>
 </body>
 </html>
