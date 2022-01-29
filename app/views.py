@@ -3,9 +3,8 @@ from app import app
 
 @app.route('/')
 def source():
-
-    message = 'Hello WOrld'
-    return render_template('source.html', message = message)
+    display_sources = 
+    return render_template('source.html')
 
 @app.route('/news/<news_name>')
 def news(news_name):
