@@ -1,0 +1,7 @@
+{% macro displaySources(sources) %}
+
+    {% for source in sources %}
+        <li>{{ source.author }}</li>
+    {% endfor %}
+
+{% endmacro %}
