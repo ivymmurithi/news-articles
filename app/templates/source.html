@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% import 'macros.html' as macro %}
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -7,14 +7,26 @@
     </head>
     <body>
 
-        {% block content %}
+        {% block body %}
+
         <h3> Global Sources</h3>
 
-        <ul>
+        {% for source in sources %}
+        <div class="card w-50">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a href="{{ source.url }}" class="btn btn-primary">Go to page</a>
+            </div>
+          </div>
+          {% endfor %}
+
+        <!-- <ul>
             {% for source in sources %}
-            <li>{{ source.name }}</li>
+            <li>{{ source.url }}</li>
             {% endfor %}
-        </ul>
+        </ul> -->
+
         {% endblock %}
     </body>
 </html>
