@@ -13,10 +13,16 @@
 
         {% for source in sources %}
         <div class="card w-50">
-            <div class="card-body">
-              <h5 class="card-title">{{ source.name }}</h5>
-              <p class="card-text">{{ source.description }}</p>
-              <a href="{{ source.url }}" class="btn btn-primary">Go to article</a>
+            <div class="card" style="width: 18rem;">
+                <img src="{{ source.urlToImage }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{source.title}}</h5>
+                  <p class="card-text">{{ source.description }}</p>
+                </div>
+                <div class="card-footer text-muted">
+                    <p>Published on: {{ source.publishedAt }}</p> 
+                </div>
+                  <a href="{{ source.url }}" class="btn btn-primary">Go to article</a>    
             </div>
           </div>
           {% endfor %}

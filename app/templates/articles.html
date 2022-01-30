@@ -14,8 +14,8 @@
 
         {% block body %}
 
+        {% for article in articles %}
         <div class="card">
-            {% for article in articles %}
             <div class="card-header">
               {{ article.title }}
             </div>
@@ -25,8 +25,12 @@
                 <footer class="blockquote-footer">{{ article.author }}<cite title="Source Title">{{ article.name }}</cite></footer>
               </blockquote>
             </div>
-            {% endfor %}
+            <div class="card-footer text-muted">
+                {{ article.publishedAt }}
+            </div>
           </div>
+          {% endfor %}
+
           
           {% endblock %}
 
