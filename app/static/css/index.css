@@ -13,3 +13,11 @@ body {
     text-align: center;
     padding: 8px;
 }
+
+img {
+    align-items: center;
+    justify-content: center;
+    width:  500%;
+    height: 500%;
+    object-fit: cover;
+}
