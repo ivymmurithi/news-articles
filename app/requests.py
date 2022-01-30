@@ -27,8 +27,8 @@ def process_results(news_list):
     news_results = []
 
     for news_item in news_list:
-        name = news_item.get('name')
-        url = news_item.get('url')
+        name = news_item.get('source.name')
+        url = news_item.get('source.url')
 
         source_object = Source(name,url)
         news_results.append(source_object)
