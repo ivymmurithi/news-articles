@@ -1,1 +1,21 @@
-<h1>{{ name }}</h1>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Global Articles</title>
+        {% endif %}
+    </head>
+    <body>
+
+        <h3> Global Articles</h3>
+        <ul>
+            {% for article in articles %}
+            <li>{{ article.author }}</li>
+            {% endfor %}
+        </ul>
+
+    </body>
+</html>

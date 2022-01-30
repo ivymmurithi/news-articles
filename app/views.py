@@ -6,11 +6,17 @@ from .requests import get_news,news_articles
 
 @app.route('/')
 def source():
-    display_sources = get_news('articles')
+    display_sources = get_news('sources')
     title = 'Home - News Sources WorldWide'
-    return render_template ('source.html', title = title, articles = display_sources)
+
+    return render_template('source.html', title = title, sources = display_sources)
 
 # @app.route('/news/<news_name>')
 # def news(news_name):
 
 #     return render_template('articles.html',name =  news_name)
+
+@app.route('/articles')
+def articles():
+    display_articles = news_articles('articles')
+    return render_template('articles.html', articles =  display_articles)
