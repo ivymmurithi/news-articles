@@ -1,4 +1,0 @@
-api_key = 'ef3c58dc0ba5400fb8306deb346111a5'
-ef3c58dc0ba5400fb8306deb346111a5
-
-https://newsapi.org/v2/everything?q={}&from=2022-01-01&language=en&sortBy=popularity&apiKey=ef3c58dc0ba5400fb8306deb346111a5

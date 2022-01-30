@@ -27,15 +27,17 @@ def process_results(news_list):
     news_results = []
 
     for news_item in news_list:
-        name = news_item.get('source.name')
+        name = news_item.get('')
+        print(name)
         url = news_item.get('source.url')
         description = news_item.get('source.description')
-
 
         source_object = Source(name,url,description)
         news_results.append(source_object)
 
+
     return news_results
+
 
 def news_articles(articles):
     get_articles_url = base_url.format(articles,api_key)
@@ -49,6 +51,7 @@ def news_articles(articles):
         if get_news_response['articles']:
             news_results_list = get_news_response['articles']
             articles_results = process_results(news_results_list)
+
 
 
     return articles_results

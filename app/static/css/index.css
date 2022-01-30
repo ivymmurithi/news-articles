@@ -12,12 +12,23 @@ body {
     height: 50%;
     text-align: center;
     padding: 8px;
+    margin-top: 5%;
 }
 
-img {
+.card-body img {
     align-items: center;
     justify-content: center;
     width:  500%;
     height: 500%;
     object-fit: cover;
+}
+
+.header-title h1 {
+    font-weight: 700;
+    text-align: center;
+}
+
+.header-icon img {
+    float: left;
+    width: 9%;
 }

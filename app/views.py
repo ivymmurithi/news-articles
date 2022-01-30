@@ -10,11 +10,6 @@ def source():
 
     return render_template('source.html', sources = display_sources)
 
-# @app.route('/news/<news_name>')
-# def news(news_name):
-
-#     return render_template('articles.html',name =  news_name)
-
 @app.route('/articles')
 def articles():
     display_articles = news_articles('articles')
