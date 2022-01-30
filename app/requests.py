@@ -29,7 +29,7 @@ def process_results(news_list):
     for news_item in news_list:
         name = news_item.get('source.name')
         url = news_item.get('source.url')
-        description = news_item.get('description')
+        description = news_item.get('source.description')
 
 
         source_object = Source(name,url,description)
