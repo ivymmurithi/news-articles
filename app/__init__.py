@@ -12,8 +12,14 @@ def create_app(config_name):
 
     bootstrap.init_app(app)
 
-    from app.main import views
-    from app.main import error
+    from .main import main as main_blueprint
+    app.register_blueprint(main_blueprint)
+
+    from .requests import configure_request
+    configure_request(app)
+
+    # from app.main import views
+    # from app.main import error
 
     return app
 
