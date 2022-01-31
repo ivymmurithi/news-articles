@@ -1,13 +1,23 @@
 from flask import Flask
 from flask_bootstrap import Bootstrap
-from .config import config_options
+from ..config import config_options
 
-app = Flask(__name__,instance_relative_config= True)
+bootstrap = Bootstrap()
 
-app.config.from_object(config_options['development'])
-app.config.from_pyfile('config.py')
+def create_app(config_name):
 
-bootstrap = Bootstrap(app)
+    app = Flask(__name__)
 
-from app import views
-from app import error
+    app.config.from_object(config_options[config_name])
+
+    bootstrap.init_app(app)
+
+    from app.main import views
+    from app.main import error
+
+    return app
+
+# bootstrap = Bootstrap(app)
+
+# from app import views
+# from app import error
