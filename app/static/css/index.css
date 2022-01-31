@@ -4,31 +4,31 @@ body {
 
 .card-body h5 p {
   width: 20%;
-  
 }
 
-.card-body{
-    line-height: 2rem;
-    height: 50%;
-    text-align: center;
-    padding: 8px;
-    margin-top: 5%;
+.card-body {
+  line-height: 2rem;
+  height: 50%;
+  text-align: center;
+  padding: 8px;
+  margin-top: 5%;
 }
 
 .card-body img {
-    align-items: center;
-    justify-content: center;
-    width:  500%;
-    height: 500%;
-    object-fit: cover;
+  align-items: center;
+  justify-content: center;
+  width: 500%;
+  height: 500%;
+  object-fit: cover;
+  margin-right: 10%;
 }
 
 .header-title h1 {
-    font-weight: 700;
-    text-align: center;
+  font-weight: 700;
+  text-align: center;
 }
 
 .header-icon img {
-    float: left;
-    width: 9%;
+  float: left;
+  width: 9%;
 }
