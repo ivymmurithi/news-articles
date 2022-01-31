@@ -25,7 +25,6 @@ def get_news(source):
         return news_results
 
 def process_results(news_list):
-    print(news_list)
     news_results = []
 
     for news_item in news_list:
@@ -36,8 +35,9 @@ def process_results(news_list):
         urlToImage = news_item.get('urlToImage')
         author = news_item.get('author')
         title = news_item.get('title')
+        publishedAt = news_item.get('publishedAt')
 
-        source_object = Source(name,url,description,urlToImage,author,title)
+        source_object = Source(name,url,description,urlToImage,author,title,publishedAt)
         news_results.append(source_object)
 
 

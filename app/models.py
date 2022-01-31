@@ -1,12 +1,14 @@
 class Source:
 
-    def __init__(self,name,url,description,urlToImage,author,title):
+    def __init__(self,name,url,description,urlToImage,author,title,publishedAt):
         self.name = name
         self.url = url
         self.description = description
         self.urlToImage = urlToImage
         self.author = author
         self.title = title
+        self.publishedAt = publishedAt
+
 
 class Articles:
     def __init__(self,name,title,url,author,description,publishedAt,content,urlToImage):
