@@ -1,7 +1,7 @@
 import unittest
-from models import source
+from app.models import Source
 
-Source = source.Source
+# Source = source.Source
 
 class NewsTest(unittest.TestCase):
     def setUp(self):
@@ -16,5 +16,5 @@ class NewsTest(unittest.TestCase):
         self.assertTrue(isinstance(self.new_source,Source))
 
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+    # unittest.main()

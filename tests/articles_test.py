@@ -32,5 +32,5 @@ class articlesTest(unittest.TestCase):
         self.assertTrue(isinstance(self.new_articles,Articles))
 
 
-if __name__ == '__main__':
-    unittest.main()
+# if __name__ == '__main__':
+    # unittest.main()
