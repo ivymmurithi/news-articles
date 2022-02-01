@@ -9,10 +9,11 @@ When you want to view a particular interesting article, click the button, go to 
 
 ## Technologies used
 1. News API
-2. Bootstrap
-3. Google Fonts
-4. Undraw
-5. Python3.8
+2. Flask Microframework
+3. Bootstrap
+4. Google Fonts
+5. Undraw
+6. Python3.8
 
 ## Authors
 Ivy Murithi
