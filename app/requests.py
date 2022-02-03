@@ -1,6 +1,5 @@
 import urllib.request,json
 from .models import Source,Articles
-from instance.config import Base
 import os
 from datetime import date
 
