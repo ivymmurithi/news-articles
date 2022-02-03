@@ -6,7 +6,7 @@ from ..requests import get_news,news_articles
 @main.route('/')
 def source():
     display_sources = get_news('sources')
-
+    print(display_sources)
     return render_template('source.html', sources = display_sources)
 
 @main.route('/articles')

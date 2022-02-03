@@ -1,18 +1,22 @@
 import urllib.request,json
 from .models import Source,Articles
+from instance.config import Base
+import os
+from datetime import date
 
-
-api_key = None
+api_key = os.environ.get('NEWS_API_KEY')
 base_url = None
 
 def configure_request(app):
     global api_key,base_url
-    api_key = app.config['NEWS_API_KEY']
     base_url = app.config['NEWS_API_BASE_URL']
 
 def get_news(source):
 
-    get_news_url = base_url.format(source,api_key)
+    get_news_url = base_url.format(source,date.today(), api_key)
+    print(get_news_url)
+    print(api_key)
+
     with urllib.request.urlopen(get_news_url) as url:
         get_news_data = url.read()
         get_news_response = json.loads(get_news_data)
